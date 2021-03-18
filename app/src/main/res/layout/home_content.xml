@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_home"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/secondaryDarkColor"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.HomeFragment">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/roles"
+            android:textColor="@color/primaryTextColor"
+            app:layout_constraintEnd_toEndOf="@+id/home_btn_roles"
+            app:layout_constraintStart_toStartOf="@+id/home_btn_roles"
+            app:layout_constraintTop_toBottomOf="@+id/home_btn_roles" />
+
+        <com.andexert.library.RippleView
+            android:id="@+id/ripple_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/home_btn_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_play_button"
+                android:id="@+id/btn_start"/>
+        </com.andexert.library.RippleView>
+
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/ripple_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/main_icon" />
+
+        <ImageView
+            android:id="@+id/home_btn_roles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/home_btn_setting"
+            app:layout_constraintEnd_toStartOf="@+id/home_btn_setting"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/home_btn_about_us"
+            app:layout_constraintTop_toTopOf="@+id/home_btn_setting"
+            app:srcCompat="@drawable/ic_role" />
+
+        <ImageView
+            android:id="@+id/home_btn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/home_btn_rate_us"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/home_btn_roles"
+            app:layout_constraintTop_toBottomOf="@+id/ripple_view"
+            app:layout_constraintVertical_bias="0.79"
+            app:srcCompat="@drawable/ic_cogwheel" />
+
+        <ImageView
+            android:id="@+id/home_btn_rate_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/home_btn_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/home_btn_setting"
+            app:layout_constraintTop_toTopOf="@+id/home_btn_setting"
+            app:srcCompat="@drawable/ic_rate" />
+
+        <ImageView
+            android:id="@+id/home_btn_about_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/home_btn_setting"
+            app:layout_constraintEnd_toStartOf="@+id/home_btn_roles"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/home_btn_setting"
+            app:srcCompat="@drawable/ic_menu_share" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/about_us"
+            android:textColor="@color/primaryTextColor"
+            app:layout_constraintEnd_toEndOf="@+id/home_btn_about_us"
+            app:layout_constraintStart_toStartOf="@+id/home_btn_about_us"
+            app:layout_constraintTop_toBottomOf="@+id/home_btn_about_us" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/setting"
+            android:textColor="@color/primaryTextColor"
+            app:layout_constraintEnd_toEndOf="@+id/home_btn_setting"
+            app:layout_constraintStart_toStartOf="@+id/home_btn_setting"
+            app:layout_constraintTop_toBottomOf="@+id/home_btn_setting" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/rate_us"
+            android:textColor="@color/primaryTextColor"
+            app:layout_constraintEnd_toEndOf="@+id/home_btn_rate_us"
+            app:layout_constraintStart_toStartOf="@+id/home_btn_rate_us"
+            app:layout_constraintTop_toBottomOf="@+id/home_btn_rate_us" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

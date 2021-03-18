@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.yasin.mafia.ui.home.HomeFragment"
+        android:label="@string/mafia"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_start"
+            app:destination="@id/nav_start" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_totorial"
+            app:destination="@id/nav_totorial" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_totorial"
+        android:name="com.yasin.mafia.ui.totorial.TotorialFragment"
+        android:label="@string/menu_totorial"
+        tools:layout="@layout/fragment_totorial" />
+
+    <fragment
+        android:id="@+id/nav_start"
+        android:name="com.yasin.mafia.ui.start.StartFragment"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_nav_start_to_characterFragment"
+            app:destination="@id/characterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterFragment"
+        android:name="com.yasin.mafia.ui.characters.CharacterFragment"
+        android:label="@string/mafia" >
+        <action
+            android:id="@+id/action_characterFragment_to_characterFragment2"
+            app:destination="@id/characterFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterFragment2"
+        android:name="com.yasin.mafia.ui.characters.CharacterFragment2"
+        android:label="@string/Citizen">
+        <action
+            android:id="@+id/action_characterFragment2_to_showRoleFragment"
+            app:destination="@id/showRoleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showRoleFragment"
+        android:name="com.yasin.mafia.ui.show_role.ShowRoleFragment" />
+</navigation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:opacity="opaque" android:layout_height="match_parent" android:layout_width="match_parent">
+
+    <!-- The background color, preferably the same as your normal theme -->
+    <item android:drawable="@color/splash"/>
+
+
+    <item>
+        <bitmap android:src="@drawable/mafia_splash"
+            android:gravity="center"/>
+    </item>
+</layer-list>

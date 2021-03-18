@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/secondaryDarkColor"
+            android:orientation="vertical"
+            tools:context=".ui.characters.CharacterFragment2">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tb_characters2"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/secondaryDarkColor"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/character2_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/character2_next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="-2dp"
+            android:layout_marginBottom="-2dp"
+            android:background="@drawable/btn_next"
+            android:elevation="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            app:srcCompat="@drawable/ic_next" />
+    </FrameLayout>
+</layout>
